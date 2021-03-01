@@ -12,12 +12,11 @@ to their respective (excellent) documentations.
 ## Querying VFB
 Queries against VFB's REST API are easiest with
 [`vfb_connect`](https://github.com/VirtualFlyBrain/VFB_connect) for Python.
-For R there is a `vfb_connect` wrapper ,
-[`vfbconnectr`](https://github.com/jefferis/vfbconnectr) using reticulate.
+For R there is a `vfb_connect` wrapper, [`vfbconnectr`](https://github.com/jefferis/vfbconnectr).
 See also David's presentation for details.
 
 ## R
-In R the [natverse](http://natverse.org) is your one-stop-shop for all things
+In R, the [natverse](http://natverse.org) is your one-stop-shop for all things
 neuron: it's a collection of various R packages that are built on top of
 the **n**euro**a**natomy **t**oolbox, `nat`. Of particular relevance for
 this workshop:
@@ -35,10 +34,11 @@ this workshop:
    and various convenience functions to work with the hemibrain dataset.
 3. [`rcatmaid`](http://natverse.org/rcatmaid/) provides an interface with
    CATMAID servers such as those the VFB uses to host published from the
-   FAFB or larval fruit fly dataset.    
+   FAFB or larval fruit fly dataset. `rcatmaid` is built on top of `nat` and
+   you can use `nat` functions with neurons pulled via `rcatmaid`.
 
 ## Python
-In Python we packages analogous to those in R:
+In Python, we find packages analogous to those in R:
 
 1. [`navis`](https://navis.readthedocs.io/en/latest/) is `nat`'s serpentine
    sibling: a general purpose neuron library for visualization and analysis
@@ -49,13 +49,14 @@ In Python we packages analogous to those in R:
     that `navis` wraps this library and adds some convenience functions.
     See [this](https://navis.readthedocs.io/en/latest/source/tutorials/neuprint.html) tutorial.
 3. [`pymaid`](https://pymaid.readthedocs.io/en/latest/) lets you interface with
-    CATMAID servers. Note that due to a name clash the library is called
-    `python-catmaid` on PyPI.
+    CATMAID servers. Critically, it's built on top of `navis` and you can
+    natively use `navis` functions with `pymaid` neurons. Note that due to a
+    name clash the library is called `python-catmaid` on PyPI.
 
 
 ## Noteworthy mentions
 There are a few more packages/functions that you might hear of over the course
-of the workshops.
+of the workshop.
 
 <p align="center">
 <img src="https://github.com/VirtualFlyBrain/training/raw/main/presentations/_static/vfb_workshop2.png" width="600">
@@ -64,17 +65,16 @@ of the workshops.
 ### NBLAST
 NBLAST is an algorithm that computes morphological similarity between neurons
 ([Costa et al., 2016](https://www.cell.com/neuron/fulltext/S0896-6273(16)30265-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627316302653%3Fshowall%3Dtrue)). This has proven incredibly useful to find similar
-neurons across data sets but also to cluster neurons into cell types.
+neurons across datasets but also to cluster neurons into cell types.
 
 On the R side the algorithm is implemented in
 [`nat.nblast`](https://natverse.github.io/nat.nblast/) and in Python it is
-part of `navis` ([tutorial](https://navis.readthedocs.io/en/latest/source/tutorials/nblast.html)).
+part of `navis` (see this [tutorial](https://navis.readthedocs.io/en/latest/source/tutorials/nblast.html)).
 
 ### Transforms
 You will note that neurons pulled from VFB are typically in the same
 template space which makes co-visualization of neurons from different
 datasets a breeze. If you want to transform spatial data between
 template brains, e.g. from FAFB ("FAFB14") to hemibrain ("JRCFIB2018F"), you
-should look for [`nat.flybrains`](https://natverse.github.io/nat.flybrains/)
-and [`nat.jrcbrains`](https://github.com/natverse/nat.jrcbrains) in R, and
+should look for [`nat.flybrains`](https://natverse.github.io/nat.flybrains/) & [`nat.jrcbrains`](https://github.com/natverse/nat.jrcbrains) in R and
 [`navis-flybrains`](https://github.com/schlegelp/navis-flybrains) in Python.
