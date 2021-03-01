@@ -54,7 +54,8 @@ In Python we packages analogous to those in R:
 
 
 ## Noteworthy mentions
-There are a few more packages that you might hear of
+There are a few more packages/functions that you might hear of over the course
+of the workshops.
 
 <p align="center">
 <img src="https://github.com/VirtualFlyBrain/training/raw/main/presentations/_static/vfb_workshop2.png" width="600">
