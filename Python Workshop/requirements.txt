@@ -4,3 +4,4 @@ git+git://github.com/schlegelp/pymaid@master
 ipywidgets
 jsonpath_rw
 seaborn
+neuprint-python
