@@ -1,0 +1,6 @@
+vfb_connect
+git+git://github.com/schlegelp/navis@master
+git+git://github.com/schlegelp/pymaid@master
+ipywidgets
+jsonpath_rw
+seaborn
