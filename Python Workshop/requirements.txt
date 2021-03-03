@@ -5,3 +5,4 @@ ipywidgets
 jsonpath_rw
 seaborn
 neuprint-python
+flybrains
