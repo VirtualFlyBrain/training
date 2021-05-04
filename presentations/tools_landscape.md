@@ -11,7 +11,7 @@ to their respective (excellent) documentations.
 
 ## Querying VFB
 Queries against VFB's REST API are easiest with
-[`vfb_connect`](https://github.com/VirtualFlyBrain/VFB_connect) for Python.
+[`vfb_connect`](https://vfb-connect.readthedocs.io/) for Python.
 For R there is a `vfb_connect` wrapper, [`vfbconnectr`](https://github.com/jefferis/vfbconnectr).
 See also David's presentation for details.
 
