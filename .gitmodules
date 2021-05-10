@@ -1,0 +1,3 @@
+[submodule "R Workshop"]
+	path = R Workshop
+	url = https://github.com/VirtualFlyBrain/natworkshop.git
